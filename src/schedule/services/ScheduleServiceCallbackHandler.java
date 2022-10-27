@@ -59,4 +59,17 @@ public abstract class ScheduleServiceCallbackHandler {
    * allocateClient operation
    */
   public void receiveErrorallocateClient(java.lang.Exception e) {}
+
+  /**
+   * auto generated Axis2 call back method for getClientAllocations method override this method for
+   * handling normal response from getClientAllocations operation
+   */
+  public void receiveResultgetClientAllocations(
+      schedule.services.ScheduleServiceStub.GetClientAllocationsResponse result) {}
+
+  /**
+   * auto generated Axis2 Error handler override this method for handling error response from
+   * getClientAllocations operation
+   */
+  public void receiveErrorgetClientAllocations(java.lang.Exception e) {}
 }

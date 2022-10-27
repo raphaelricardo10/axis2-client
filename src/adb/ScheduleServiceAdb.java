@@ -7,6 +7,8 @@ import org.apache.axis2.AxisFault;
 import schedule.services.ScheduleServiceExceptionException;
 import schedule.services.ScheduleServiceStub;
 import schedule.services.ScheduleServiceStub.AllocateClient;
+import schedule.services.ScheduleServiceStub.AllocationStub;
+import schedule.services.ScheduleServiceStub.GetClientAllocations;
 import schedule.services.ScheduleServiceStub.GetFirstAvailableDate;
 
 public class ScheduleServiceAdb extends AdbClient {
@@ -32,5 +34,12 @@ public class ScheduleServiceAdb extends AdbClient {
         request.setAvailableTime(availableTime);
 
         this.stub.allocateClient(request);
+    }
+
+    public AllocationStub[] getClientAllocations(String cpf) throws RemoteException, ScheduleServiceExceptionException {
+        GetClientAllocations request = new GetClientAllocations();
+        request.setCpf(cpf);
+
+        return this.stub.getClientAllocations(request).get_return();
     }
 }

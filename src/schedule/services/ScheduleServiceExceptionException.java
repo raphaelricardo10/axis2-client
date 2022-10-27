@@ -8,7 +8,7 @@ package schedule.services;
 
 public class ScheduleServiceExceptionException extends java.lang.Exception {
 
-  private static final long serialVersionUID = 1666820872122L;
+  private static final long serialVersionUID = 1666839606767L;
 
   private schedule.services.ScheduleServiceStub.ScheduleServiceException faultMessage;
 
