@@ -9,22 +9,13 @@ import client.services.ClientServiceStub.PersonStub;
 import doctor.services.DoctorServiceStub.DoctorStub;
 import schedule.services.ScheduleServiceExceptionException;
 
-/**
- *
- * @author Pankaj - www.journaldev.com This class will invoke Axis2 web service
- *         operations using Stub classes
- *
- */
 public class Axis2ClientMain {
 
-	/**
-	 * END_POINT is the web service endpoint
-	 */
-	private final static String CLIENT_END_POINT = "http://localhost:8080/axis2/services/ClientService?wsdl";
-	private final static String DOCTOR_END_POINT = "http://localhost:8080/axis2/services/DoctorService?wsdl";
-	private final static String SCHEDULE_END_POINT = "http://localhost:8080/axis2/services/ScheduleService?wsdl";
+    private final static String CLIENT_END_POINT = "http://localhost:8080/axis2/services/ClientService?wsdl";
+    private final static String DOCTOR_END_POINT = "http://localhost:8080/axis2/services/DoctorService?wsdl";
+    private final static String SCHEDULE_END_POINT = "http://localhost:8080/axis2/services/ScheduleService?wsdl";
 
-	public static void main(String[] args) throws RemoteException, ScheduleServiceExceptionException {
+    public static void main(String[] args) throws RemoteException, ScheduleServiceExceptionException {
         ClientServiceAdb clientService = new ClientServiceAdb(CLIENT_END_POINT);
         DoctorServiceAdb doctorService = new DoctorServiceAdb(DOCTOR_END_POINT);
         ScheduleServiceAdb scheduleService = new ScheduleServiceAdb(SCHEDULE_END_POINT);
@@ -39,7 +30,9 @@ public class Axis2ClientMain {
         String firstAvailableDate = scheduleService.getFirstAvailableDate(doctor.getCrm());
         scheduleService.allocateClient(client.getCpf(), doctor.getCrm(), specialty, firstAvailableDate);
 
+        scheduleService.getClientAllocations(client.getCpf());
+
         System.out.println(firstAvailableDate);
-	}
+    }
 
 }
