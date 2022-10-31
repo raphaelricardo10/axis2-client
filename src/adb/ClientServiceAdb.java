@@ -7,6 +7,8 @@ import org.apache.axis2.AxisFault;
 import client.services.ClientServiceStub;
 import client.services.ClientServiceStub.GetClients;
 import client.services.ClientServiceStub.PersonStub;
+import client.services.ClientServiceStub.CreateClient;
+import client.services.ClientServiceExceptionException;
 
 public class ClientServiceAdb extends AdbClient {
     private ClientServiceStub stub;
@@ -20,5 +22,17 @@ public class ClientServiceAdb extends AdbClient {
         GetClients request = new GetClients();
 
         return this.stub.getClients(request).get_return();
+    }
+    
+    public PersonStub createClient(String name, String email, String cpf, String gender, String phoneNumber, String birthDate) throws RemoteException, ClientServiceExceptionException {
+        CreateClient request = new CreateClient();
+        request.setCpf(cpf);
+        request.setName(name);
+        request.setEmail(email);
+        request.setGender(gender);
+        request.setBirthDate(birthDate);
+        request.setPhoneNumber(phoneNumber);
+
+        return this.stub.createClient(request).get_return();
     }
 }
