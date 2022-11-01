@@ -36,6 +36,19 @@ public abstract class ClientServiceCallbackHandler {
   }
 
   /**
+   * auto generated Axis2 call back method for createClient method override this method for handling
+   * normal response from createClient operation
+   */
+  public void receiveResultcreateClient(
+      client.services.ClientServiceStub.CreateClientResponse result) {}
+
+  /**
+   * auto generated Axis2 Error handler override this method for handling error response from
+   * createClient operation
+   */
+  public void receiveErrorcreateClient(java.lang.Exception e) {}
+
+  /**
    * auto generated Axis2 call back method for getClients method override this method for handling
    * normal response from getClients operation
    */

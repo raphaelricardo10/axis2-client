@@ -3977,7 +3977,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
     /* This type was generated from the piece of schema that had
     name = DoctorStub
     Namespace URI = http://stub/xsd
-    Namespace Prefix = ns1
+    Namespace Prefix = ns2
     */
 
     /** field for BirthDate */
@@ -4469,7 +4469,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
 
     private static java.lang.String generatePrefix(java.lang.String namespace) {
       if (namespace.equals("http://stub/xsd")) {
-        return "ns1";
+        return "ns2";
       }
       return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
     }
@@ -4975,7 +4975,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
     /* This type was generated from the piece of schema that had
     name = AllocationStub
     Namespace URI = http://stub/xsd
-    Namespace Prefix = ns1
+    Namespace Prefix = ns2
     */
 
     /** field for AppointmentDate */
@@ -5224,7 +5224,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
 
     private static java.lang.String generatePrefix(java.lang.String namespace) {
       if (namespace.equals("http://stub/xsd")) {
-        return "ns1";
+        return "ns2";
       }
       return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
     }
@@ -5586,7 +5586,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
     /* This type was generated from the piece of schema that had
     name = PersonStub
     Namespace URI = http://stub/xsd
-    Namespace Prefix = ns1
+    Namespace Prefix = ns2
     */
 
     /** field for BirthDate */
@@ -5935,7 +5935,7 @@ public class ScheduleServiceStub extends org.apache.axis2.client.Stub {
 
     private static java.lang.String generatePrefix(java.lang.String namespace) {
       if (namespace.equals("http://stub/xsd")) {
-        return "ns1";
+        return "ns2";
       }
       return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
     }
